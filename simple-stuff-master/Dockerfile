@@ -1,6 +1,4 @@
 FROM docker.io/ibmcom/websphere-liberty:20.0.0.5-full-java11-openj9-ubi
-user 10001
-RUN MKDIR my-special-folder
 COPY Dockerfile my-special-folder/
 COPY target/simple-stuff.war /config/dropins/
 COPY config/server.xml /config/
